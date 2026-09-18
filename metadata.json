@@ -1,0 +1,6 @@
+{
+  "name": "เกมยิงหนังสติ๊กคำสรรพนาม ๕ ชนิด",
+  "description": "เกมยิงหนังสติ๊กจำแนกคำสรรพนาม 5 ชนิดตามบรรทัดฐานภาษาไทย พร้อมสรุปความรู้ แบบทดสอบ 20 ข้อ และจัดอันดับคะแนน Powered by Kruwaybiig",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

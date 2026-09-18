@@ -1,0 +1,56 @@
+{
+  "entities": {
+    "Score": {
+      "title": "Score",
+      "description": "Global leaderboard score entry submitted by Thai pronoun quiz or slingshot game players worldwide",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique score identifier"
+        },
+        "playerName": {
+          "type": "string",
+          "description": "Display name of the student or player",
+          "maxLength": 60
+        },
+        "score": {
+          "type": "number",
+          "description": "Game or quiz score earned"
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["slingshot", "quiz"],
+          "description": "Game mode: slingshot (3-min timed game) or quiz (30 questions)"
+        },
+        "maxScore": {
+          "type": "number",
+          "description": "Maximum possible score for the session"
+        },
+        "stars": {
+          "type": "number",
+          "description": "Star rating earned (1 to 3 stars)"
+        },
+        "date": {
+          "type": "string",
+          "description": "Date of the recorded score"
+        },
+        "timeSpentSec": {
+          "type": "number",
+          "description": "Time taken in seconds"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp of creation"
+        }
+      },
+      "required": ["id", "playerName", "score", "mode"]
+    }
+  },
+  "firestore": {
+    "/scores/{scoreId}": {
+      "schema": "#/entities/Score",
+      "description": "Public global leaderboard scores collection accessible to all players worldwide"
+    }
+  }
+}
